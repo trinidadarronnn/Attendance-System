@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Students / Employees | Attendance Recording System</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🕒</div>
+        <span>Attendance System</span>
+      </div>
+      <nav>
+        <a href="index.html">📊 Dashboard</a>
+        <a href="attendance.html">✅ Attendance</a>
+        <a href="students.html" class="active">👥 Students / Employees</a>
+        <a href="records.html">📋 Attendance Records</a>
+        <a href="settings.html">⚙️ Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Main area -->
+    <div class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <h1>Students / Employees</h1>
+        <div class="clock" id="clock"></div>
+      </header>
+
+      <main class="content">
+        <div class="card">
+          <div class="toolbar">
+            <div class="grow">
+              <label for="searchInput">Search by name or ID</label>
+              <input type="search" id="searchInput" placeholder="Type a name or ID Number..." />
+            </div>
+            <button class="btn btn-primary" id="addBtn">+ Add New</button>
+          </div>
+
+          <div class="message" id="pageMessage"></div>
+
+          <div class="table-wrap" style="margin-top: 18px;">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID Number</th>
+                  <th>Full Name</th>
+                  <th>Department / Course</th>
+                  <th>Year Level / Position</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="studentsBody">
+                <tr><td colspan="5" class="empty-row">Loading...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Add / Edit pop-up form -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <h2 id="modalTitle">Add New</h2>
+
+      <div class="form-group">
+        <label for="fId">ID Number</label>
+        <input type="text" id="fId" placeholder="e.g. 2026-0001" autocomplete="off" />
+      </div>
+      <div class="form-group">
+        <label for="fName">Full Name</label>
+        <input type="text" id="fName" placeholder="e.g. Juan Dela Cruz" autocomplete="off" />
+      </div>
+      <div class="form-group">
+        <label for="fDept">Department / Course</label>
+        <input type="text" id="fDept" placeholder="e.g. BSCS or IT Department" autocomplete="off" />
+      </div>
+      <div class="form-group">
+        <label for="fLevel">Year Level / Position</label>
+        <input type="text" id="fLevel" placeholder="e.g. 3rd Year or Teacher" autocomplete="off" />
+      </div>
+
+      <div class="message" id="modalMessage"></div>
+
+      <div class="modal-actions">
+        <button class="btn btn-light" id="cancelBtn">Cancel</button>
+        <button class="btn btn-primary" id="saveBtn">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/students.js"></script>
+</body>
+</html>

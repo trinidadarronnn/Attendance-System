@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attendance | Attendance Recording System</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🕒</div>
+        <span>Attendance System</span>
+      </div>
+      <nav>
+        <a href="index.html">📊 Dashboard</a>
+        <a href="attendance.html" class="active">✅ Attendance</a>
+        <a href="students.html">👥 Students / Employees</a>
+        <a href="records.html">📋 Attendance Records</a>
+        <a href="settings.html">⚙️ Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Main area -->
+    <div class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <h1>Attendance</h1>
+        <div class="clock" id="clock"></div>
+      </header>
+
+      <main class="content">
+        <div class="card attendance-box">
+          <div class="big-clock" id="bigClock">--:--:--</div>
+          <div class="big-date" id="bigDate"></div>
+
+          <div class="form-group">
+            <label for="idInput">Student / Employee ID Number</label>
+            <input type="text" id="idInput" placeholder="Enter your ID Number" autocomplete="off" autofocus />
+          </div>
+
+          <div class="button-row">
+            <button class="btn btn-success" id="timeInBtn">Time In</button>
+            <button class="btn btn-danger" id="timeOutBtn">Time Out</button>
+          </div>
+
+          <div class="message" id="message"></div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/attendance.js"></script>
+</body>
+</html>

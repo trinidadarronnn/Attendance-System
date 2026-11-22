@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Attendance Recording System</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🕒</div>
+        <span>Attendance System</span>
+      </div>
+      <nav>
+        <a href="index.html" class="active">📊 Dashboard</a>
+        <a href="attendance.html">✅ Attendance</a>
+        <a href="students.html">👥 Students / Employees</a>
+        <a href="records.html">📋 Attendance Records</a>
+        <a href="settings.html">⚙️ Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Main area -->
+    <div class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <h1>Dashboard</h1>
+        <div class="clock" id="clock"></div>
+      </header>
+
+      <main class="content">
+        <div class="cards">
+          <div class="card stat-card">
+            <div class="label">Total Registered</div>
+            <div class="value" id="totalPeople">0</div>
+          </div>
+          <div class="card stat-card green">
+            <div class="label">Attendance Today</div>
+            <div class="value" id="todayAttendance">0</div>
+          </div>
+          <div class="card stat-card orange">
+            <div class="label">Currently Present</div>
+            <div class="value" id="currentlyPresent">0</div>
+          </div>
+          <div class="card stat-card red">
+            <div class="label">Absent Today</div>
+            <div class="value" id="absent">0</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Recent Attendance Activity</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID Number</th>
+                  <th>Full Name</th>
+                  <th>Date</th>
+                  <th>Time In</th>
+                  <th>Time Out</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="recentBody">
+                <tr><td colspan="6" class="empty-row">Loading...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

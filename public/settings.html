@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings | Attendance Recording System</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🕒</div>
+        <span>Attendance System</span>
+      </div>
+      <nav>
+        <a href="index.html">📊 Dashboard</a>
+        <a href="attendance.html">✅ Attendance</a>
+        <a href="students.html">👥 Students / Employees</a>
+        <a href="records.html">📋 Attendance Records</a>
+        <a href="settings.html" class="active">⚙️ Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Main area -->
+    <div class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <h1>Settings</h1>
+        <div class="clock" id="clock"></div>
+      </header>
+
+      <main class="content">
+        <div class="card" style="max-width: 640px;">
+          <h2>System Information</h2>
+          <ul class="info-list">
+            <li><span>System Name</span><strong>Attendance Recording System</strong></li>
+            <li><span>Version</span><strong>1.0.0</strong></li>
+            <li><span>Database</span><strong>SQLite (attendance.db)</strong></li>
+            <li><span>Backend</span><strong>Node.js + Express</strong></li>
+            <li><span>Frontend</span><strong>HTML, CSS, JavaScript</strong></li>
+            <li><span>Late After</span><strong>8:00 AM</strong></li>
+          </ul>
+        </div>
+
+        <div class="card" style="max-width: 640px; margin-top: 18px;">
+          <h2>Attendance Status Guide</h2>
+          <ul class="info-list">
+            <li><span>Present</span><span class="badge badge-present">Timed in on or before 8:00 AM</span></li>
+            <li><span>Late</span><span class="badge badge-late">Timed in after 8:00 AM</span></li>
+            <li><span>Completed</span><span class="badge badge-completed">Timed in and timed out</span></li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+</body>
+</html>
