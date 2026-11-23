@@ -57,7 +57,7 @@ searchInput.addEventListener('input', () => {
 });
 
 // Date filter
-dateFilter.addEventListener('change', loadRecords);
+
 
 // "Today" button
 document.getElementById('todayBtn').addEventListener('click', () => {
