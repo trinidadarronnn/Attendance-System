@@ -48,20 +48,4 @@ async function sendAttendance(action) {
 
     const data = await response.json();
 
-    if (response.ok) {
-      showMessage(data.message, 'success');
-      idInput.value = '';
-    } else {
-      showMessage(data.error, 'error');
-    }
-  } catch (error) {
-    showMessage('Cannot connect to the server. Is it running?', 'error');
-  }
-
-  timeInBtn.disabled = false;
-  timeOutBtn.disabled = false;
-  idInput.focus();
-}
-
-timeInBtn.addEventListener('click', () => sendAttendance('time-in'));
-timeOutBtn.addEventListener('click', () => sendAttendance('time-out'));
+    
