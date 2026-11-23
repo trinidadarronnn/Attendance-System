@@ -42,6 +42,22 @@ function clean(value) {
 //  STUDENTS / EMPLOYEES
 // ======================================================
 
+// Get all (with optional search by name or ID)
+app.get('/api/students', (req, res) => {
+  try {
+    const search = `%${clean(req.query.search)}%`;
+    const rows = db
+      .prepare(
+        `SELECT * FROM students
+         WHERE full_name LIKE ? OR student_employee_id LIKE ?
+         ORDER BY full_name ASC`
+      )
+      .all(search, search);
+    res.json(rows);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to load records.' });
+  }
+});
 
 
 // Add a new person
